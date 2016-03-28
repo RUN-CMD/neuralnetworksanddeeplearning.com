@@ -8,7 +8,7 @@ class Perceptron
   end
 
   def weighted_sum
-		sum = 0
+    sum = 0
     @inputs.each_with_index do |input, index|
       sum += input * weight(index)
     end
@@ -44,6 +44,3 @@ class LikesIceCreamPerceptron < Perceptron
     WEIGHTS[index]
   end
 end
-
-puts "** Likes iced cream (likes_sweet, likes_dairy, doesnt_like_fun) => #{LikesIceCreamPerceptron.new(1, 1, 0).output}"
-puts "** Likes iced cream (doesnt_like_sweet, likes_dairy, likes_fun) => #{LikesIceCreamPerceptron.new(0, 1, 1).output}"
