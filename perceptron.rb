@@ -4,7 +4,7 @@ class Perceptron
   end
 
   def output
-    weighted_sum > threshold ? 1 : 0
+    weighted_sum + bias > 0 ? 1 : 0
   end
 
   def weighted_sum
@@ -14,6 +14,10 @@ class Perceptron
     end
 
     sum
+  end
+
+  def bias
+   -threshold
   end
 
   def threshold
